@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Base Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="4" />
+
+  <!-- Multi-Node Connection Network (Representing Account Balancing) -->
+  <g transform="translate(256, 256)">
+    <!-- Ambient Ring -->
+    <circle r="140" fill="none" stroke="rgba(99, 102, 241, 0.2)" stroke-width="2" stroke-dasharray="8 8" />
+    <circle r="170" fill="none" stroke="rgba(6, 182, 212, 0.15)" stroke-width="1.5" />
+
+    <!-- Connecting Link Beams -->
+    <line x1="0" y1="-80" x2="-100" y2="80" stroke="url(#primaryGrad)" stroke-width="4" stroke-linecap="round" opacity="0.8" />
+    <line x1="0" y1="-80" x2="100" y2="80" stroke="url(#primaryGrad)" stroke-width="4" stroke-linecap="round" opacity="0.8" />
+    <line x1="-100" y1="80" x2="100" y2="80" stroke="url(#cyanGrad)" stroke-width="4" stroke-linecap="round" opacity="0.8" />
+
+    <!-- Center AI Hub -->
+    <circle r="52" fill="url(#bgGrad)" stroke="url(#primaryGrad)" stroke-width="4" filter="url(#softGlow)" />
+    <!-- Center Emblem: Diamond Spark / Star of Excellence -->
+    <path d="M 0 -28 L 8 -8 L 28 0 L 8 8 L 0 28 L -8 8 L -28 0 L -8 -8 Z" fill="white" />
+    <circle r="4" fill="#6366f1" />
+
+    <!-- Account Node 1: Soal / SKD (Top) -->
+    <g transform="translate(0, -110)">
+      <circle r="34" fill="#1e293b" stroke="#6366f1" stroke-width="3.5" />
+      <!-- Book / Exam icon -->
+      <path d="M -12 -8 C -6 -10 0 -8 0 -8 C 0 -8 6 -10 12 -8 L 12 10 C 6 8 0 10 0 10 C 0 10 -6 8 -12 10 Z" fill="none" stroke="#a5b4fc" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <line x1="0" y1="-8" x2="0" y2="10" stroke="#a5b4fc" stroke-width="2.5" />
+    </g>
+
+    <!-- Account Node 2: Video / Reels (Bottom Left) -->
+    <g transform="translate(-115, 95)">
+      <circle r="34" fill="#1e293b" stroke="#ec4899" stroke-width="3.5" />
+      <!-- Play / Film icon -->
+      <polygon points="-6,-10 10,0 -6,10" fill="#f472b6" />
+    </g>
+
+    <!-- Account Node 3: Poster / Visual (Bottom Right) -->
+    <g transform="translate(115, 95)">
+      <circle r="34" fill="#1e293b" stroke="#06b6d4" stroke-width="3.5" />
+      <!-- Palette / Sparkle -->
+      <circle cx="-5" cy="-5" r="3" fill="#38bdf8" />
+      <circle cx="6" cy="-4" r="3" fill="#38bdf8" />
+      <circle cx="5" cy="6" r="3" fill="#38bdf8" />
+      <circle cx="-6" cy="6" r="3" fill="#38bdf8" />
+    </g>
+  </g>
+</svg>

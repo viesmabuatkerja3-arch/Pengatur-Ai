@@ -1,0 +1,6 @@
+{
+  "name": "AlokasiAI - Pengatur Sebaran Akun AI Kedinasan & CPNS",
+  "description": "Aplikasi pribadi untuk memetakan peran akun AI, mencatat pemakaian, memantau hitung mundur limit, rekomendasi akun cerdas, dan perpustakaan prompt untuk konten kedinasan & CPNS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
